@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- the canvas *must not* have any border or padding, or mouse coords will be wrong -->
+    <canvas id="canvas" style="display:block; border:0; padding:0; background-color: black;" tabindex=-1></canvas>
+    <span id="logmsg"></span>
+
+    <script type="module" src="/main.js"></script>
+    
+    
+
+    <script>
+        function updateGameSize() {
+            var winheight = window.innerHeight
+            var winwidth = window.innerWidth
+            document.getElementById('canvas').width = winwidth
+            document.getElementById('canvas').height = winheight 
+        }
+
+        updateGameSize()
+        window.onresize = updateGameSize
+    </script>
+</body>
+
+</html>
