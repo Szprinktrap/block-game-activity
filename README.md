@@ -1,6 +1,6 @@
 # block-game-activity
 a classic version of a popular block game as a discord activity
-[![screenshot](https://i.imgur.com/dkLd3NC.jpeg)](https://twitter.com/Szprinktrap/status/1770011622926368825)
+[![screenshot](https://i.imgur.com/dkLd3NC.jpeg)](https://twitter.com/Szprinktrap/status/1769861524758118427)
 
 **note:** this is mainly a proof of concept. the code SUCKS (a lot of it was taken from [discord's tutorial](https://discord.com/developers/docs/activities/building-an-activity)), and it's weird to host.
 
