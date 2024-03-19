@@ -15,18 +15,19 @@ a classic version of a popular block game as a discord activity
 
 # setup
 1. clone this repo to your server
-2. edit `.env` file with your discord app client id and secret
-3. run `npm i` in both client and server folders
-4. configure your web server as required if you haven't already (as written above, sample nginx config is in the repo)
-5. make sure your minecraft classic server is up and running (and that it doesn't verify usernames)
-6. run `npm run dev` in both client and server folders (do so in screen screens, tmux sessions or whatever you prefer)
-7. go to your discord app settings -> activities -> url mappings and put your domain name in the root mapping
-8. also go to settings -> oauth2 and put your domain name in redirects section
+2. rename `example.env` to `.env`
+3. edit `.env` file with your discord app client id and secret
+4. run `npm i` in both client and server folders
+5. configure your web server as required if you haven't already (as written above, sample nginx config is in the repo)
+6. make sure your minecraft classic server is up and running (and that it doesn't verify usernames)
+7. run `npm run dev` in both client and server folders (do so in screen screens, tmux sessions or whatever you prefer)
+8. go to your discord app settings -> activities -> url mappings and put your domain name in the root mapping
+9. also go to settings -> oauth2 and put your domain name in redirects section
  ![url mappings section](https://i.imgur.com/Vn46Vjj.png)
  ![oauth2 section](https://i.imgur.com/LEyjkuG.png)
-9. enable developer mode in your discord client
-10. go on a voice channel on a server that has 25 members max (discord limitation, as custom activities are in "Public Developer Preview") and try to run your activity
-11. profit???
+10. enable developer mode in your discord client
+11. go on a voice channel on a server that has 25 members max (discord limitation, as custom activities are in "Public Developer Preview") and try to run your activity
+12. profit???
 
 # playing with friends
 i'm guessing this is a "Public Developer Preview" limitation too, but, to play with friends, you'll need to add them as your application tester.
