@@ -18,12 +18,13 @@ async function setupDiscordSdk() {
         state: "",
         prompt: "none",
         scope: [
-            "identify"
+            "identify",
+            "guilds"
         ],
     });
 
     // Retrieve an access_token from your activity's server
-    const response = await fetch("/api/token", {
+    const response = await fetch("/.proxy/api/token", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -63,7 +64,7 @@ setupDiscordSdk().then(async () => {
     let blockgameScript = document.createElement('script')
 
     modulescript.type = 'text/javascript'
-    modulescript.src = `api/modulescript.js?username=${username}`
+    modulescript.src = `/.proxy/api/modulescript.js?username=${username}&fuckcache=${Math.random().toString()}`
 
     blockgameScript.async = true
     blockgameScript.type = 'text/javascript'

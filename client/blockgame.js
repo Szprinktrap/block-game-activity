@@ -3349,7 +3349,7 @@ function _fetchTexturePackAsync(url, onload, onerror) {
 
 function _interop_AsyncDownloadTexturePack(rawPath) {
  var path = UTF8ToString(rawPath);
- var url = "default.zip";
+ var url = ".proxy/default.zip";
  _fetchTexturePackAsync(url, function(buffer) {
   CCFS.writeFile(path, new Uint8Array(buffer));
   _interop_callVoidFunc("main_phase1");
@@ -3531,7 +3531,7 @@ function _interop_AudioDescribe(errCode, buffer, bufferLen) {
 
 function _interop_AudioDownload(name) {
  var xhr = new XMLHttpRequest();
- xhr.open("GET", "/static/sounds/" + name + ".wav", true);
+ xhr.open("GET", "/.proxy/static/sounds/" + name + ".wav", true);
  xhr.responseType = "arraybuffer";
  xhr.onload = function() {
   var data = xhr.response;
@@ -4410,7 +4410,7 @@ function _interop_SocketConnect(sockFD, raw, port) {
  try {
   var parts = addr.split("/");
   var proto = _interop_IsHttpsOnly() ? "wss://" : "ws://";
-  var url = proto + window.location.host + '/' + parts[0] + ":" + port + "/" + parts.slice(1).join("/");
+  var url = proto + window.location.host + '/.proxy/' + parts[0] + ":" + port + "/" + parts.slice(1).join("/");
   ws = new WebSocket(url, "ClassiCube");
   ws.binaryType = "arraybuffer";
  } catch (e) {
